@@ -1,0 +1,14 @@
+*{padding:0;margin:0;}
+a{text-decoration:none;}
+
+.dialog-box{position:fixed;z-index:99999;top:50%;left:50%;display:block;font: normal 12px '\5FAE\8F6F\96C5\9ED1';}
+.dialog-container{border-radius:10px;background:#f8fffb;box-shadow: 0 0 10px #bbb;}
+.dialog-title{height:40px;line-height:40px;padding:0 15px;}
+.dialog-title>h3{float:left;font-size:14px;}
+.dialog-title>.dialog-close-btn{float:right;color:#333;font-size:24px;margin-left:10px;}
+.dialog-content{padding:20px;line-height:24px;}
+.dialog-btns{padding:0 10px 10px;text-align:center;}
+.dialog-btns>span{display:inline-block;width:90px;height:30px;text-align:center;line-height:30px;border-radius:6px;margin:0 10px;cursor:pointer;}
+.dialog-btns>.dialog-btns-cancel{background:#ddd;}
+.dialog-btns>.dialog-btns-confirm{background:#66be8c;color:#fff;}
+.dialog-mask{position:absolute;top:0;left:0;right:0;bottom:0;background:#000;opacity:0.3;z-index:99998;}

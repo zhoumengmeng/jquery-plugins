@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dialog demo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/dailog.css">
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+</head>
+<body>
+	<div>
+		<input type="button" value="弹框" class="open-dialog" />
+		<input type="button" value="toast" class="open-toast" />
+		<div id="dialogBox"></div>
+		<div id="toastBox"></div>
+		<!-- <div class="dialog-box">
+			<div class="dialog-container">
+				<div class="dialog-title">
+					<h3>title</h3>
+					<a href="" class="dialog-close-btn">×</a>
+				</div>
+				<div class="dialog-content">xxx</div>
+				<div class="dialog-btns">
+					<span class="dialog-btns-cancel">cancel</span>
+					<span class="dialog-btns-confirm">ok</span>
+				</div>
+			</div>
+		</div>
+		<div class="dialog-mask"></div> -->
+	</div>
+
+	<script>
+		$(".open-dialog").click(function(){
+			$("#dialogBox").dialog({
+				width:400,
+				height:300,
+				title:"标题",
+				hasBtn:true,
+				hasMask:true,
+				hasClose:true,
+				confirmValue:"确定",
+				cancelValue:"取消",
+				content:'This is the content',
+				cancel:function(){
+					console.log("cancel");
+				},
+				confirm:function(){
+					console.log("confirm");
+				}
+			})
+		})
+		$(".open-toast").click(function(){
+			$("#toastBox").dialog({
+				hasMask:true,
+				content:'This is the content',
+				autoHide:true
+			})
+		})
+	</script>
+</body>
+</html>
